@@ -23,8 +23,8 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
       Navigator.of(context)
           .push(MaterialPageRoute(builder: (context) => MainHomeScreen()));
     } else if (index == 1) {
-      Navigator.of(context)
-          .push(MaterialPageRoute(builder: (context) => const SearchPage()));
+      Navigator.of(context).push(
+          MaterialPageRoute(builder: (context) => const ShoppingBagPage()));
     } else if (index == 2) {
       Navigator.of(context).push(
           MaterialPageRoute(builder: (context) => const FastFashionPage()));
@@ -32,8 +32,8 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
       Navigator.of(context)
           .push(MaterialPageRoute(builder: (context) => const ChatPage()));
     } else if (index == 4) {
-      Navigator.of(context).push(
-          MaterialPageRoute(builder: (context) => const ShoppingBagPage()));
+      Navigator.of(context)
+          .push(MaterialPageRoute(builder: (context) => const ProfilePage()));
     }
   }
 
@@ -93,38 +93,38 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(
-              Icons.home_outlined,
+              Icons.add,
               color: Color.fromARGB(255, 46, 145, 244),
             ),
-            label: 'Home',
+            label: '',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.shopping_cart_outlined,
+              color: Color.fromARGB(255, 46, 145, 244),
+            ),
+            label: '',
           ),
           BottomNavigationBarItem(
             icon: Icon(
               Icons.explore_outlined,
               color: Color.fromARGB(255, 46, 145, 244),
             ),
-            label: 'Explore',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.add,
-              color: Color.fromARGB(255, 46, 145, 244),
-            ),
-            label: 'Add',
+            label: '',
           ),
           BottomNavigationBarItem(
             icon: Icon(
               Icons.chat_bubble_outline_rounded,
               color: Color.fromARGB(255, 46, 145, 244),
             ),
-            label: 'Chat',
+            label: '',
           ),
           BottomNavigationBarItem(
             icon: Icon(
-              Icons.shopping_bag_outlined,
+              Icons.account_circle_outlined,
               color: Color.fromARGB(255, 46, 145, 244),
             ),
-            label: 'Bag',
+            label: '',
           ),
         ],
         currentIndex: _selectedIndex,
